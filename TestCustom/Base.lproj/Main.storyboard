@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bMe-Ro-kU9">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Table View Controller-->
+        <scene sceneID="bRF-ss-WvB">
+            <objects>
+                <tableViewController id="bMe-Ro-kU9" customClass="HomeTableViewController" customModule="TestCustom" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ju4-Au-Aa3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="bMe-Ro-kU9" id="Ph7-lX-Lq6"/>
+                            <outlet property="delegate" destination="bMe-Ro-kU9" id="0EW-gL-Bmr"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NiM-KC-77r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="146"/>
+        </scene>
+        <!--Edit Data View Controller-->
+        <scene sceneID="sEC-Pn-nmS">
+            <objects>
+                <viewController storyboardIdentifier="EditData" id="eRc-Gn-GMZ" customClass="EditDataViewController" customModule="TestCustom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ooj-Or-6dw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="wGt-q1-mtP">
+                                <rect key="frame" x="16" y="192" width="343" height="124"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yhc-Lp-jH3">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="eRc-Gn-GMZ" id="b1D-7r-rCy"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hvD-lo-UJ0">
+                                        <rect key="frame" x="0.0" y="45" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="eRc-Gn-GMZ" id="aLb-ua-aX7"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Salary" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJk-bG-4ie">
+                                        <rect key="frame" x="0.0" y="90" width="343" height="34"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="eRc-Gn-GMZ" id="Uqm-yN-Pz9"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Employee Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIB-zs-wJC">
+                                <rect key="frame" x="16" y="85" width="343" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="hKi-IH-uYp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zV0-b2-Cu3">
+                                <rect key="frame" x="16" y="383.66666666666669" width="343" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="pbs-8N-Hws"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="zV0-b2-Cu3" firstAttribute="centerX" secondItem="xMN-AZ-bJj" secondAttribute="centerX" id="48f-zW-bII"/>
+                            <constraint firstItem="zV0-b2-Cu3" firstAttribute="centerY" secondItem="xMN-AZ-bJj" secondAttribute="centerY" id="6xA-wd-N5d"/>
+                            <constraint firstItem="xMN-AZ-bJj" firstAttribute="trailing" secondItem="xIB-zs-wJC" secondAttribute="trailing" constant="16" id="79e-j2-wFK"/>
+                            <constraint firstItem="zV0-b2-Cu3" firstAttribute="leading" secondItem="wGt-q1-mtP" secondAttribute="leading" id="Dmq-AA-v9f"/>
+                            <constraint firstItem="xIB-zs-wJC" firstAttribute="top" secondItem="xMN-AZ-bJj" secondAttribute="top" constant="41" id="OiN-V9-Vj9"/>
+                            <constraint firstItem="xIB-zs-wJC" firstAttribute="leading" secondItem="xMN-AZ-bJj" secondAttribute="leading" constant="16" id="X6d-YG-Axk"/>
+                            <constraint firstItem="wGt-q1-mtP" firstAttribute="trailing" secondItem="xIB-zs-wJC" secondAttribute="trailing" id="avv-44-0dZ"/>
+                            <constraint firstItem="wGt-q1-mtP" firstAttribute="top" secondItem="xIB-zs-wJC" secondAttribute="bottom" constant="54" id="e7j-dJ-tUW"/>
+                            <constraint firstItem="wGt-q1-mtP" firstAttribute="leading" secondItem="xIB-zs-wJC" secondAttribute="leading" id="zzy-Kc-39i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xMN-AZ-bJj"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="koD-Wg-9R7" appends="YES" id="cIR-tK-gXT"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="TXTAge" destination="hvD-lo-UJ0" id="bhI-bw-Oaf"/>
+                        <outlet property="TXTName" destination="yhc-Lp-jH3" id="T9M-Qj-2Vs"/>
+                        <outlet property="TXTSalary" destination="QJk-bG-4ie" id="ovs-Us-uQ6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MsA-XU-BPd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="koD-Wg-9R7">
+                    <connections>
+                        <action selector="Back:" destination="eRc-Gn-GMZ" id="D3g-Zr-s0I"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="813.60000000000002" y="145.56650246305421"/>
+        </scene>
+    </scenes>
+</document>
