@@ -56,14 +56,14 @@ class HomeTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header : HeaderViewCell = Bundle.main.loadNibNamed("HeaderViewCell", owner: self, options: nil)? .first as! HeaderViewCell
-        return header
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 53.0
-    }
+    //    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    //        let header : HeaderViewCell = Bundle.main.loadNibNamed("HeaderViewCell", owner: self, options: nil)? .first as! HeaderViewCell
+    //        return header
+    //    }
+    //
+    //    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    //        return 53.0
+    //    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
